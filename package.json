@@ -1,0 +1,23 @@
+{
+  "name": "ReybotVIP",
+  "version": "3.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon main.js",
+    "code": "rm -rf ./data/* && node main.js --number",
+    "qr": "rm -rf ./data/* && node main.js",
+    "start": "node main.js --number"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "6.4.0",
+    "axios": "^1.7.2",
+    "chalk": "^5.3.0",
+    "jimp": "^0.16.1",
+    "link-preview-js": "^3.0.5",
+    "qrcode-terminal": "^0.12.0",
+    "ytdl-core": "^4.11.5"
+  }
+}

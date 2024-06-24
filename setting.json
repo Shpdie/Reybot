@@ -1,0 +1,11 @@
+{
+  "bot": { "name": "DakenzBot", "number": "" },
+  "owner": { "name": "adam", "number": "6281214557752" },
+  "groups": [],
+  "fitur": {
+    "useCode": true,
+    "antiCall": true,
+    "antiLink": false,
+    "greetings": false
+  }
+}

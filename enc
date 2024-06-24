@@ -1,0 +1,20 @@
+#!/usr/bin/sh
+
+
+echo -e "\n\n\t\x1b[46m\x1b[1m\x20\x20START ENCRYPTING FILES\x20\x20\x1b[0m\n\n"
+
+pkg install -y zip rsync 
+
+mkdir -p reybot && rsync -av --exclude=enc --exclude=yarn.lock --exclude=package-lock.json --exclude=data/* --exclude=utils/encrypt.js --exclude=node_modules --exclude=reybot --exclude=test.js --exclude=reybot.zip  ./* ./reybot/
+
+npm i javascript-obfuscator
+
+node utils/encrypt.js
+
+npm un javascript-obfuscator 
+
+zip -r reybot.zip reybot
+
+rm -rf reybot
+
+echo -e "\n\n\t\x1b[44m\x1b[1m\x20\x20FINISHED ENCRYPTING FILES\x20\x20\x1b[0m\n\n\t\x1b[1m\x20\x20\x20CHECK FILES REYBOT.ZIP\x1b[0m\n\n"
